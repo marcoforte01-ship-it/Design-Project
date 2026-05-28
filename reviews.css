@@ -1,0 +1,137 @@
+body {
+    background-color: #5c2505
+    }
+  
+  .topnav {
+      background-color: #202020;
+      overflow: hidden;
+      width: 100%;
+      position: fixed; 
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 20px 20px;
+      text-decoration: none;
+      font-size: 25px;
+      font-family: Arial, sans-serif;
+      transition: transform 0.3s ease;
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: #363636;
+      color: rgb(255, 255, 255);
+      transform: scale(1.1);
+    }
+    
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+    .search {
+        float: right;
+        padding: 10px;
+        border: none;
+        margin-top: 12px;
+        margin-right: 16px;
+        font-size: 23px;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    
+    .review-form {
+        margin-top: 240px;
+        text-align: center;
+    }
+
+    .review-form label {
+        font-family: arial, sans-serif;;
+    }
+
+    .review-form #fname {
+        width: 65%;
+        font-size: 25px;
+        padding: 12px;
+        margin-top: 0;
+        margin-bottom: 15px;
+        border: 2px solid #301900;
+        box-sizing: border-box;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .review-form #message {
+        width: 65%;
+        font-size: 25px;
+        padding: 12px;
+        margin-top: 0;
+        margin-bottom: 24px;
+        border: 2px solid #301900;
+        box-sizing: border-box;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .review-form input[type=submit] {
+        width: 35%;
+        font-size: 25px;
+        padding: 12px;
+        margin-top: 20px;
+        cursor: pointer;
+        border-radius: 15px;
+        border: 2px solid #301900;
+        box-sizing: border-box;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+
+    }
+
+    .review-form input[type=submit]:hover {
+        background-color: #202020;
+        color: rgb(255, 255, 255);
+        transform: scale(1.1);
+    }
+
+    .review-form input[type=radio] + label {
+        font-size: 40px;
+        padding: 5px;
+        margin-top: 10px;
+        color: white;
+
+    }
+
+    .review-form input[type=radio] {
+        width: 30px;
+        height: 30px;
+        font-size: 40px;
+        padding: 5px;
+        margin-top: 10px;
+        color: white;
+
+    }
+
+    h6 {
+        font-family: arial, sans-serif;
+        position: absolute;
+        width: 60%;
+        text-align: center;
+        font-size: 50px;
+        color: #ffffff;
+        text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        margin-top: -120px;
+        margin-left: 255px
+        
+    }
+
+    .checked {
+        color: orange;
+      }

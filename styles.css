@@ -1,0 +1,246 @@
+body {
+  background-color: #5c2505
+  }
+
+.topnav {
+    background-color: #202020;
+    overflow: hidden;
+    width: 100%;
+    position: fixed; /* Optional: keeps the bar at the top while scrolling */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #363636;
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  /* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 10px;
+  border: none;
+  margin-top: 12px;
+  margin-right: 16px;
+  font-size: 23px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Start of image sideshow code */
+input[type="radio"] {
+    display: none;
+  }
+  
+  /* Slider Container */
+  .slider {
+    z-index: 15;
+    margin-left: 25px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    top: 100px;
+    border-radius: 10%;
+  }
+  
+  /* Slide Wrapper */
+  .slides {
+    display: flex;
+    width: 300%; /* Total width for 3 slides */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    width: 33.33%;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  
+  /* Move the slides based on which radio is checked */
+  #slide1:checked ~ .slides { transform: translateX(0); }
+  #slide2:checked ~ .slides { transform: translateX(-33.33%); }
+  #slide3:checked ~ .slides { transform: translateX(-66.66%); }
+  
+  /* Navigation Buttons Styling */
+  .controls label {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .next { right: 10px; }
+  .prev { left: 10px; }
+  
+  /* Only show the correct buttons for the active slide */
+  #slide1:checked ~ .controls .slide1-prev,
+  #slide1:checked ~ .controls .slide1-next,
+  #slide2:checked ~ .controls .slide2-prev,
+  #slide2:checked ~ .controls .slide2-next,
+  #slide3:checked ~ .controls .slide3-prev,
+  #slide3:checked ~ .controls .slide3-next {
+    display: block;
+  }
+
+
+
+  /* Text slideshow styles */
+  .text-slider {
+    position: relative;
+    max-width: 560px;
+    margin-left: 25px;
+    margin-top: 150px;
+    padding: 40px 20px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+
+  .text-slides {
+    position: relative;
+    min-height: 120px;
+  }
+
+  .text-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 600;
+    transition: opacity 0.4s ease;
+    animation: textFade 9s infinite;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-slide:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+
+  .text-slide:nth-of-type(2) {
+    animation-delay: 3s;
+  }
+
+  .text-slide:nth-of-type(3) {
+    animation-delay: 6s;
+  }
+
+  @keyframes textFade {
+    10%, 16.66% { opacity: 1; transform: translateY(0); }
+    25%, 100% { opacity: 0; transform: translateY(-10px); }
+  }
+
+  .text-dots {
+    margin-top: 20px;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background: #bbb;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    animation: dotPulse 9s infinite;
+  }
+
+  .text-dots .dot:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+
+  .text-dots .dot:nth-of-type(2) {
+    animation-delay: 3s;
+  }
+
+  .text-dots .dot:nth-of-type(3) {
+    animation-delay: 6s;
+  }
+
+  @keyframes dotPulse {
+    10%, 16.66% { background: #301c01; }
+    25%, 100% { background: #bbb; }
+  }
+
+.stars {
+    margin-bottom: 8px;
+    font-size: 35px;
+  }
+
+  .checked {
+    color: orange;
+  }
+
+  h6 {
+    left: 705px;
+    font-size: 100px;
+    color: #ffffff;
+    padding: 10px;
+    position: absolute;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding-right: 30px;
+  } 
+  
+  .button {
+    margin-top: 400px;
+    margin-left: 820px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    padding: 25px 55px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    z-index: 100;
+    transition: transform 0.3s ease;
+  }
+  .button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }

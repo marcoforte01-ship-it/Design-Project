@@ -1,0 +1,95 @@
+body {
+    background-color: #5c2505; 
+    background-image: url(backgroud.png);
+    background-repeat: no-repeat !important; 
+    background-position: right center !important;
+    background-size: 50% 100% !important;
+    background-attachment: fixed;
+}
+
+.topnav {
+    background-color: #202020;
+    overflow: hidden;
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+    
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease;
+}
+    
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #363636;
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+    
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.search {
+    float: right;
+    padding: 10px;
+    border: none;
+    margin-top: 12px;
+    margin-right: 16px;
+    font-size: 23px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h6 {
+    font-family: arial, sans-serif;
+    position: absolute;
+    width: 60%;
+    text-align: center;
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-top: 80px;
+    margin-left: -280px; /* FIXED: Added missing semicolon here */
+}
+
+h2 {
+    font-family: arial, sans-serif;
+    position: absolute;
+    width: 44%;
+    text-align: left;
+    line-height: 30px;
+    font-size: 19px;
+    color: #ffffff;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-top: 160px;
+    margin-left: 10px;
+}
+
+    h1 {
+        font-family: arial, sans-serif;
+        position: absolute;
+        width: 40%;
+        text-align: left;
+        line-height: 30px;
+        font-size: 18px;
+        color: #ffffff;
+        text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        margin-top: 550px;
+        margin-left: 10px;
+}
+
